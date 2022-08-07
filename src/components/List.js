@@ -3,6 +3,7 @@ import { useEffect, useReducer, useState } from "react";
 import NewTodo from "./NewTodo";
 import TodoList from "./TodoList";
 import useAsync from "../hooks/useAsync";
+import "../css/List.css";
 
 const List = (props) => {
 
@@ -65,12 +66,12 @@ const List = (props) => {
   if(!todos) return <h1>데이터 없음</h1>;
 
   return (
-    <>
-      <h1>todo list</h1>
+    <div className="List">
+      <h1>Todo List</h1>
       <NewTodo onTodoAdded={appendNewTodoHandler}/>
       <TodoList todos={todos}/>
       <button onClick={logout}>로그아웃</button>
-    </>
+    </div>
   );
 }
 

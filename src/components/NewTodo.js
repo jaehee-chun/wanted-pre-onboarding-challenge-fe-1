@@ -25,15 +25,19 @@ const NewTodo = (props) => {
   return(
     <>
       <form onSubmit={formSubmitHandler}>
-        <div>
-          제목 : <input type="text" onChange={titleTextChangeHandler}/>
+        <div className="newTodo">
+          <h3>새로운 할일 추가</h3>
+          <div>
+            <input id="title" type="text" onChange={titleTextChangeHandler} placeholder="제목을 입력하세요"/>
+          </div>
+          <div>
+            <input id="content" type="text" onChange={contentChangeHandler} placeholder="내용을 입력하세요"/>
+          </div>
+          <div>
+            <input type='submit' value='할일 추가하기'></input>
+          </div>
         </div>
-        <div>
-          내용 : <input type="text" onChange={contentChangeHandler}/>
-        </div>
-        <div>
-          <input type='submit' value='할일 추가하기'></input>
-        </div>
+         
       </form>
     </>
   )

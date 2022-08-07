@@ -5,7 +5,8 @@ const TodoList = (props) => {
   
 
   return(
-      <>
+      <div className="todoList">
+        <h3>할일 목록</h3>
         <table>
           <thead>
             <tr>
@@ -25,7 +26,7 @@ const TodoList = (props) => {
           )}
           </tbody>
         </table>
-      </>
+      </div>
   )
 }
 
